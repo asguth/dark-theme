@@ -1,37 +1,27 @@
-
-@font-face {
-    font-family: CustomFont;
-    src: url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&display=swap');
-}
-
-@font-face {
-    font-family: CustomFont2;
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
     --bg-color: #f5f5f5;
     --bg-color2: gray;
     --text-color: black;
-    --text--fam: CustomFont, Sans-serif;
+    --text--fam: "Roboto", Sans-serif;
+    --font--size: 4em;
+    --logo--size: 0.5em;
 }
   
 [data-theme="dark"] {
     --bg-color: black;
     --bg-color2: #333;
     --text-color: #f5f5f5;
-    --text-fam: CustomFont2, Sans-Serif;
 }
 
 body {
     background-color: var(--bg-color);
-    line-height: 1.6;
     min-height: 100vh;
     display: grid;
     place-items: center;
@@ -41,17 +31,25 @@ body {
     background-color: var(--bg-color2);
     color: var(--text-color);
     font-family: var(--text--fam);
-    width: 80%;
-    max-width: 800px;
     text-align: center;
-    padding: 1em;
-    font-size: 4em;
+    font-size: var(--font--size);
+    float: left;
+    padding: 10% 5%;
+    letter-spacing: 2px;
 }
 
 .bi {
-    display: flex;
-    font-size: 2rem;
+    font-size: var(--logo--size);
     cursor: pointer;
-    margin: 0px;
     float: right;
 }
+
+    @media screen and (max-width: 769px)  {
+        h3 {
+            font-size: 0.6em;
+        }
+
+        .bi {
+            font-size: 0.3em;
+        }
+    }
